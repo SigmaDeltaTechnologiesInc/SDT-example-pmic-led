@@ -84,6 +84,13 @@ int main(void)
 
     // Turn off PMIC LED's
     max77650.writeReg(ledNone, sizeof(ledNone));
+
+    // Instead, you can also use this functions to control LEDs
+    // max77650.setLED0_FS(1);          // 0 ~ 3
+    // max77650.setLED0_INV(0);         // 0 ~ 1
+    // max77650.setLED0_BRT(0);         // 0 ~ 31
+    // max77650.setLED0_Period(15);     // 0 ~ 15
+    // max77650.setLED0_Duty(15);       // 0 ~ 15
     
     // Cycle MAX32620FTHR LED's
     while(true) {
